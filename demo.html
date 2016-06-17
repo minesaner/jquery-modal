@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<link rel="stylesheet" href="modal.css">
+</head>
+<body>
+	<div class="modal modal-hidden">
+    <div class="modal-bg"></div>
+    <div class="modal-content" style="width:700px;">
+      <div class="modal-header">
+        <div class="modal-close">×</div><div class="modal-title">modal</div>
+      </div>
+      <div class="modal-body">
+        hello
+      </div>
+    </div>
+  </div>
+
+	<script src="jquery-2.1.1.js"></script>
+	<script src="modal.js"></script>
+	<script>
+		$('.modal').modal({
+			contentDuration: 2000
+		});
+		$('#close').on('click', function () {
+			$('.modal').modal('hide')
+		});
+	</script>
+</body>
+</html>
